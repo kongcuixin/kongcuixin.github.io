@@ -9,7 +9,7 @@ form.addEventListener("submit", (e) => {
   const password = passwordInput.value.trim();
 
   // Array of allowed IP addresses
-  const allowedIps = ["127.0.0.1", "192.168.0.1"];
+  const allowedIps = ["103.17.88.108", "192.168.0.1"];
   
   // Get the client's IP address
   const clientIp = e.request.remoteAddress;
