@@ -8,12 +8,13 @@
 	<p>I know your IP address:</p>
 	<p id="ip-address"></p>
 
+	<script src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
 	<script>
-		// Get the IP address of the user
-		var ipAddress = window.location.hostname;
-
-		// Display the IP address on the webpage
-		document.getElementById("ip-address").innerHTML = ipAddress;
+		// Function to handle the IP address response
+		function getIP(response) {
+			// Display the IP address on the webpage
+			document.getElementById("ip-address").innerHTML = response.ip;
+		}
 	</script>
 </body>
 </html>
