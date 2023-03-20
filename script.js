@@ -8,9 +8,15 @@ form.addEventListener("submit", (e) => {
   const email = emailInput.value.trim().toLowerCase();
   const password = passwordInput.value.trim();
 
-  if (email === "han1306" && password === "adminhan") {
+  // Array of allowed IP addresses
+  const allowedIps = ["127.0.0.1", "192.168.0.1"];
+  
+  // Get the client's IP address
+  const clientIp = e.request.remoteAddress;
+  
+  if (allowedIps.includes(clientIp) && email === "han1306" && password === "adminhan") {
     window.location.href = "index1.html";
   } else {
-    alert("Incorrect email or password. Please try again.");
+    alert("Access denied. Please check your email and password, and make sure you're logging in from an allowed IP address.");
   }
 });
