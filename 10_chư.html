@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="src/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="src/css/font.css" />
+        <link rel="stylesheet" href="src/css/style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row"><div class="col-12 mt-3"><a href="index.html" class="btn btn-outline-secondary">In theo khung hình</a></div></div>
+            <div class="row">
+                <h3 class="text-center title-text">TRÌNH TẠO CON DẤU (TIẾNG TRUNG)</h3>
+            </div>
+            <div class="row border">
+                <div class="col-6 text-center mx-auto">
+                    
+                    <div class="row mt-3">
+                        <label for="input_text_10_1" style="text-align: left;">Dòng 1</label>
+                        <input type="text" id="input_text_10_1" class="text-center" maxlength="10" value="印章章印章章印章章印"/>
+                    </div>
+                    
+                    <div class="row mt-3 mb-3">
+                        <label for="input_text_10_2" style="text-align: left;">Dòng 2</label>
+                        <input type="text" id="input_text_10_2" class="text-center" maxlength="10"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mb-3">
+                    <p class="btn-10-chu mt-3">TẠO 10 CHỮ</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-lg-6 border">
+                <div class="col-12">
+                    <div class="container mt-3">
+                        <div class="row">
+                            <h3 class="text-center">Chọn font chữ</h3>
+                            <hr />
+                            <div class="select-font-china" style="display: flex; flex-wrap: wrap"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12">
+                    <h3>Chọn màu chữ</h3>
+                    <hr />
+                    <div class="select-color-text" style="display: flex; flex-wrap: wrap"></div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <h3>Tùy chỉnh size chữ</h3>
+                    <hr />
+                    <input type="range" min="1" max="150" id="range_size" value="54" style="width: 100%" />
+                    <input type="number" id="text-size" value="54" style="width: 70px" /><span
+                        >&nbsp; px</span
+                    >
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <div class="alert alert-success" id="success-alert">
+                        <strong>Vui lòng chờ trong giây lát! </strong> Hình ảnh đang được nén.
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1"></div>
+                <div class="col-1"></div>
+                <div class="col-1"></div>
+                <div class="col-1"></div>
+                <div class="col-1"></div>
+                <div class="col-1 download-img bg-white">
+                    <div class="row">
+                        <div class="col-6 resert-css-mg-pd">
+                            <div class="row resert-css-mg-pd">
+                                <div class="mx-auto content-10-1 colorx resert-css-mg-pd" style="width: 100px;">
+                            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 resert-css-mg-pd">
+                            <div class="row resert-css-mg-pd">
+                                <div class="mx-auto content-10-2 colorx resert-css-mg-pd" style="width: 100px;">
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-1"></div>
+                <div class="col-1"></div>
+                <div class="col-1 download-img bg-white">
+                    <div class="row ok1">
+                        <div class="col-6 resert-css-mg-pd">
+                            <div class="row resert-css-mg-pd">
+                                <div class="mx-auto content-10-1 colorx resert-css-mg-pd" style="width: 100px; margin-top: 50px;">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 resert-css-mg-pd">
+                            <div class="row resert-css-mg-pd">
+                                <div class="mx-auto content-10-2 colorx resert-css-mg-pd" style="width: 100px;">
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-1"></div>
+                
+            </div>
+        </div>
+
+        <script src="src/js/jquery-3.6.1.min.js"></script>
+        <script src="src/js/bootstrap.bundle.min.js"></script>
+        <script src="src/js/dom_images.js"></script>
+        <script src="src/js/filesave.js"></script>
+        <script src="src/js/10_chu.js"></script>
+        <script src="src/js/select_font.js"></script>
+    </body>
+</html>
