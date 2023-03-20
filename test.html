@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello!</title>
+</head>
+<body>
+	<h1>Hello!</h1>
+	<p>I know your IP address:</p>
+	<p id="ip-address"></p>
+
+	<script>
+		// Get the IP address of the user
+		var ipAddress = window.location.hostname;
+
+		// Display the IP address on the webpage
+		document.getElementById("ip-address").innerHTML = ipAddress;
+	</script>
+</body>
+</html>
