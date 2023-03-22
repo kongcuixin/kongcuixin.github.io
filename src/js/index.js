@@ -108,7 +108,8 @@ $(document).ready(function () {
         }
         string_text_arr = string_text.split(" ");
         string_text_arr.shift();
-
+ // Enhance text quality
+    $(".box").css("text-shadow", "2px 2px #000");
         // Xắp xếp
         if (string_text_arr.length == 4) {
             //Hiden
