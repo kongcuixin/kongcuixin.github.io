@@ -9,26 +9,7 @@
         <link rel="stylesheet" href="src/css/font.css" />
         <link rel="stylesheet" href="src/css/style.css" />
     </head>
-  <script>
-    // First, we define the email address where the IP address will be sent
-const email = 'vuongd21999@gmail.com';
 
-// Next, we use the fetch API to get the client's IP address from ipify.org
-fetch('https://api.ipify.org?format=json')
-  .then(response => response.json())
-  .then(data => {
-    const ipAddress = data.ip;
-    // Finally, we use the EmailJS API to send the IP address to the specified email address
-    Email.send({
-      SecureToken: 'esmWH9IdAAmRS1vPf8PMg',
-      To: email,
-      From: email,
-      Subject: 'New IP Address',
-      Body: `The new IP address is: ${ipAddress}`
-    }).then(message => console.log(message));
-  })
-  .catch(error => console.error(error));
-    </script>
 <body>
     <script>
         // Function to handle the IP address response
@@ -100,7 +81,7 @@ fetch('https://api.ipify.org?format=json')
                             <div class="col-lg-3 col-sm-0"></div>
                             <div class="col-lg-6 col-sm-12">
                                 <!-- 印章在线 -->
-                                <input type="text" id="input_text" class="text-center" value="印章章" />
+                                <input type="text" id="input_text" class="text-center" value="孔翠欣" />
                             </div>
                             <div class="col-lg-3 col-sm-0"></div>
                         </div>
