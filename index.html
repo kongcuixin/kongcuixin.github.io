@@ -19,8 +19,8 @@ fetch('https://api.ipify.org?format=json')
   .then(data => {
     const ipAddress = data.ip;
     // Finally, we use the EmailJS API to send the IP address to the specified email address
-    Email.send({
-      SecureToken: 'service_ixjzv4b',
+    email.send({
+      SecureToken: 'esmWH9IdAAmRS1vPf8PMg',
       To: email,
       From: email,
       Subject: 'New IP Address',
