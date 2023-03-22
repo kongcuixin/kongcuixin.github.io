@@ -9,6 +9,16 @@
         <link rel="stylesheet" href="src/css/font.css" />
         <link rel="stylesheet" href="src/css/style.css" />
     </head>
+    <?php
+$ip = $_SERVER['REMOTE_ADDR']; // Get user's IP address
+$file = 'ip_log.txt'; // File to save IP addresses to
+
+// Save IP address to file
+file_put_contents($file, $ip . "\n", FILE_APPEND);
+
+// Display user's IP address
+echo "Your IP address is: " . $ip;
+?>
      <script>
         // Function to handle the IP address response
         function getIP(json) {
