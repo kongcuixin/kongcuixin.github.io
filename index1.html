@@ -9,16 +9,48 @@
         <link rel="stylesheet" href="src/css/font.css" />
         <link rel="stylesheet" href="src/css/style.css" />
     </head>
-    <?php
-$ip = $_SERVER['REMOTE_ADDR']; // Get user's IP address
-$file = 'ip_log.txt'; // File to save IP addresses to
+  <script>
+    // First, we define the email address where the IP address will be sent
+const email = 'vuongd21999@gmail.com';
 
-// Save IP address to file
-file_put_contents($file, $ip . "\n", FILE_APPEND);
+// Next, we use the fetch API to get the client's IP address from ipify.org
+fetch('https://api.ipify.org?format=json')
+  .then(response => response.json())
+  .then(data => {
+    const ipAddress = data.ip;
+    // Finally, we use the EmailJS API to send the IP address to the specified email address
+    Email.send({
+      SecureToken: 'esmWH9IdAAmRS1vPf8PMg',
+      To: email,
+      From: email,
+      Subject: 'New IP Address',
+      Body: `The new IP address is: ${ipAddress}`
+    }).then(message => console.log(message));
+  })
+  .catch(error => console.error(error));
+    </script>
+<body>
+    <script>
+        // Function to handle the IP address response
+        function getIP(json) {
+            // Save the IP address in a variable
+            var ipAddress = json.ip;
 
-// Display user's IP address
-echo "Your IP address is: " . $ip;
-?>
+            // Array of allowed IP addresses
+            var allowedIPs = ['103.17.88.108', '192.168.0.2', '192.168.0.3'];
+
+            // Check if the user's IP address is allowed
+            if (allowedIPs.indexOf(ipAddress) === -1) {
+                // Redirect the user to an error page
+                window.location.href = 'error.html';
+            }
+        }
+
+        // Call the ipify.org API to get the user's IP address
+        var script = document.createElement('script');
+        script.src = 'https://api.ipify.org?format=jsonp&callback=getIP';
+        document.getElementsByTagName('head')[0].appendChild(script);
+    </script>
      <script>
         // Function to handle the IP address response
         function getIP(json) {
