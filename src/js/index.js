@@ -97,8 +97,8 @@ $(document).ready(function () {
             .css("background", `url(${src_img})`)
             .css("background-size", "cover")
             .css("background-size", "fixed")
-            .css("background-repeat", "no-repeat");
-
+            .css("background-repeat", "no-repeat")
+            .css("font-weight", "900");
         // Format text
         let text = $("#input_text").val();
         let length_text = text.length;
@@ -108,9 +108,7 @@ $(document).ready(function () {
         }
         string_text_arr = string_text.split(" ");
         string_text_arr.shift();
- // Enhance text quality
-.box {
-  font-weight: bold;
+
         // Xắp xếp
         if (string_text_arr.length == 4) {
             //Hiden
