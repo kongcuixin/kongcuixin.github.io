@@ -1,0 +1,34 @@
+<label for="image-select">Select an image:</label>
+<select id="image-select" name="image">
+  <option value="">Choose an image</option>
+</select>
+<button onclick="useSelectedImage()">Use image</button>
+
+<script>
+const selectElement = document.getElementById("image-select");
+
+fetch("Khung")
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Failed to fetch images: " + response.status);
+    }
+    return response.json();
+  })
+  .then(images => {
+    images.forEach(image => {
+      const optionElement = document.createElement("option");
+      optionElement.value = image;
+      optionElement.textContent = image;
+      selectElement.appendChild(optionElement);
+    });
+  })
+  .catch(error => {
+    console.error(error);
+  });
+
+function useSelectedImage() {
+  const selectedValue = selectElement.value;
+  // do something with the selected image
+}
+</script>
+
