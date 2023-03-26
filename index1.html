@@ -11,27 +11,28 @@
     </head>
 
 <body>
-    <script>
-        // Function to handle the IP address response
-        function getIP(json) {
-            // Save the IP address in a variable
-            var ipAddress = json.ip;
+<script>
+    // Function to handle the IP address response
+    function getIP(json) {
+        // Save the IP address in a variable
+        var ipAddress = json.ip;
 
-            // Array of allowed IP addresses
-            var allowedIPs = ['103.17.88.108', '183.80.95.182', '103.153.221.34', '2405:4802:9116:aa00:d0db:b406:f2f1:a9d','183.80.95.182'];
+        // Array of allowed IP addresses
+        var allowedIPs = ['103.17.88.108', '183.80.95.182', '103.153.221.34', '183.80.95.182'];
 
-            // Check if the user's IP address is allowed
-            if (allowedIPs.indexOf(ipAddress) === -1) {
-                // Redirect the user to an error page
-                window.location.href = 'error.html';
-            }
+        // Check if the user's IP address is allowed
+        if (allowedIPs.indexOf(ipAddress) === -1) {
+            // Redirect the user to an error page
+            window.location.href = 'error.html';
         }
+    }
 
-        // Call the ipify.org API to get the user's IP address
-        var script = document.createElement('script');
-        script.src = 'https://api.ipify.org?format=jsonp&callback=getIP';
-        document.getElementsByTagName('head')[0].appendChild(script);
-    </script>
+    // Call the ipify.org API to get the user's IPv4 address
+    var script = document.createElement('script');
+    script.src = 'https://api.ipify.org?format=json&ipv4=true&callback=getIP';
+    document.getElementsByTagName('head')[0].appendChild(script);
+</script>
+
      <script>
         // Function to handle the IP address response
         function getIP(json) {
