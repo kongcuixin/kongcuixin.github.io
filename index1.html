@@ -11,6 +11,15 @@
     </head>
 
 <body>
+      <script>
+    // Check for the loggedIn cookie
+    const isLoggedIn = document.cookie.split('; ').some(cookie => cookie === 'loggedIn=true');
+
+    // If the loggedIn cookie is not set, redirect the user to the login page
+    if (!isLoggedIn) {
+      window.location.href = 'index.html'; // Replace 'login.html' with the name of your login page
+    }
+  </script>
 <script>
     // Function to handle the IP address response
     function getIP(json) {
