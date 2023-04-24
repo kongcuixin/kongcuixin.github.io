@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <form action="#" onsubmit="authenticateUser(event)">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="style.css">
@@ -30,6 +31,23 @@
     var script = document.createElement('script');
     script.src = 'https://api.ipify.org?format=json&ipv4=true&callback=getIP';
     document.getElementsByTagName('head')[0].appendChild(script);
+      function authenticateUser(event) {
+  event.preventDefault(); // Prevent the form from submitting
+
+  // Validate user credentials here (e.g., by calling your authentication API)
+  // If the credentials are valid, set a cookie and redirect to index1.html
+
+  const email = document.querySelector('.email input').value;
+  const password = document.querySelector('.password input').value;
+
+  if (email === 'han1306' && password === 'adminhan') {
+    document.cookie = 'loggedIn=true; path=/'; // Set a cookie to indicate the user is logged in
+    window.location.href = 'index1.html'; // Redirect the user to the protected page
+  } else {
+    alert('Invalid email or password');
+  }
+}
+
 </script>
 
 
